@@ -5,9 +5,16 @@ const userSchema = mongoose.Schema({
         type:String,
         minLength:5,
         trim:true,
+        require:true,
     },
-    email:String,
-    password:String,
+    email:{
+        type:String,
+        require:true
+    },
+    password:{
+        type:String,
+        require:true
+    },
     cart:{
         type: Array,
         default:[]
