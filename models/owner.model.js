@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const userSchema = mongoose.Schema({
+const ownerSchema = mongoose.Schema({
     fullName: {
         type:String,
         minLength:5,
@@ -13,13 +13,13 @@ const userSchema = mongoose.Schema({
         default:[]
     },
     isAdmin:Boolean,
-    orders: {
+    products: {
         type: Array,
         default:[]
     },
-    contact: Number,
-    picture: String
+    picture: String,
+    gstin: String,
 })
 
-const User = mongoose.model('user',userSchema)
-export default User
+const Owner = mongoose.model('owner',ownerSchema)
+export default Owner
