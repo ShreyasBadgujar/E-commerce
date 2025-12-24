@@ -21,8 +21,9 @@ if(process.env.NODE_ENV==='development'){
     
 })
 }
-router.get('/',(req,res)=>{
-    res.send("hello world")
+router.get('/admin',(req,res)=>{
+    res.render("createProduct")
 })
+
 
 export {router}

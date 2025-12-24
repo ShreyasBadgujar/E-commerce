@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create New Product</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+  <div class="max-w-3xl mx-auto mt-10 bg-white p-8 rounded shadow">
+
+    <!-- Title -->
+    <h1 class="text-xl font-semibold mb-6">Create New Product</h1>
+
+    <form action="/product/create" method="POST" enctype="multipart/form-data">
+
+      <!-- Product Details -->
+      <h2 class="text-md font-medium mb-4">Product Details</h2>
+
+      <!-- Product Image -->
+      <div class="mb-4">
+        <label class="block text-sm text-gray-600 mb-1">Product Image</label>
+        <input
+          type="file"
+          name="image"
+          class="block w-full text-sm text-gray-500
+                 file:mr-4 file:py-2 file:px-4
+                 file:rounded file:border-0
+                 file:text-sm file:font-semibold
+                 file:bg-gray-200 file:text-gray-700
+                 hover:file:bg-gray-300"
+        />
+      </div>
+
+      <!-- Product Name & Price -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <input
+          type="text"
+          name="name"
+          placeholder="Product Name"
+          class="border rounded px-3 py-2 w-full focus:outline-none focus:ring focus:border-blue-400"
+        />
+
+        <input
+          type="number"
+          name="price"
+          placeholder="Product Price"
+          class="border rounded px-3 py-2 w-full focus:outline-none focus:ring focus:border-blue-400"
+        />
+      </div>
+
+      <!-- Discount Price -->
+      <div class="mb-6">
+        <input
+          type="number"
+          name="discount"
+          placeholder="Discount Price"
+          class="border rounded px-3 py-2 w-full focus:outline-none focus:ring focus:border-blue-400"
+        />
+      </div>
+
+      <!-- Panel Details -->
+      <h2 class="text-md font-medium mb-4">Panel Details</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <input
+          type="text"
+          name="bgcolor"
+          placeholder="Background Color"
+          class="border rounded px-3 py-2 w-full focus:outline-none focus:ring focus:border-blue-400"
+        />
+
+        <input
+          type="text"
+          name="panelcolor"
+          placeholder="Panel Color"
+          class="border rounded px-3 py-2 w-full focus:outline-none focus:ring focus:border-blue-400"
+        />
+      </div>
+
+      <!-- Text Color -->
+      <div class="mb-6">
+        <input
+          type="text"
+          name="textcolor"
+          placeholder="Text Color"
+          class="border rounded px-3 py-2 w-full focus:outline-none focus:ring focus:border-blue-400"
+        />
+      </div>
+
+      <!-- Submit Button -->
+      <button
+        type="submit"
+        class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
+      >
+        Create New Product
+      </button>
+
+    </form>
+  </div>
+</body>
+</html>

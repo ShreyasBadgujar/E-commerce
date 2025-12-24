@@ -1,8 +1,13 @@
 import express from 'express'
-import { registerUser } from '../controller/registerUser'
+import { registerUser, loginUser ,logoutUser } from '../controller/authController.js'
+import { isLoggedIn } from '../middleware/isLoggedIn.js'
 
 const router = express.Router()
 
-router.get('/create', registerUser)
+router.post('/register', registerUser)
+
+router.post('/login',loginUser)
+
+router.get('/logout',isLoggedIn,logoutUser)
 
 export {router}
